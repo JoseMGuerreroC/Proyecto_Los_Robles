@@ -1,0 +1,16 @@
+:root{
+    --alabaster: #E0DFD5;
+    --darkalabaster: #afaea6;
+    --antiwhite: #E8E9EB;
+    --darkantiwhite: #adaeaf;
+    --sandybrown: #F09D51;
+    --darksandybrown: #b8793e;
+    --tomato: #F06543;
+    --darktomato: #a1442c;
+    --onyx: #313638;
+    --mainFont: "Exo 2", serif;
+}
+
+body{
+    background: var(--alabaster);
+}

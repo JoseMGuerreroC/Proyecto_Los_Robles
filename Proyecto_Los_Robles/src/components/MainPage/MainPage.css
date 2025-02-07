@@ -1,0 +1,88 @@
+.mainHeader{
+    height: 50px;
+}
+
+.mainHeader img{
+    max-height: 50px;
+    object-fit: contain;
+}
+
+.mainHeader h1{
+    font-family: var(--mainFont);
+    color: var(--onyx);
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: 700;
+}
+
+.mainHeader a{
+    color: var(--onyx);
+    font-size: 30px;
+    margin-right: 1rem;
+}
+
+.mainHeader a i{
+    transition: all .5s;
+}
+
+.mainHeader a:hover i{
+    transform: scale(.8);
+}
+
+.mainMenu{
+    width: 100%;
+    height: calc(100vh - 140px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.menuOption{
+    width: 300px;
+    height: 400px;
+    background: var(--tomato);
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menuOption p{
+    color: var(--alabaster);
+    font-size: 20px;
+    font-family: var(--mainFont);
+    font-weight: 600;
+    text-align: center;
+}
+
+.menuOption i{
+    color: var(--alabaster);
+    font-size: 70px;
+}
+
+.mainFooter{
+    height: 50px;
+    width: 100vw;
+    background: var(--tomato);
+}
+
+.mainFooter a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   font-size:  clamp(1rem, 2.5vw, 20px);
+   color: var(--antiwhite); 
+   font-family: var(--mainFont);
+   text-align: center;
+}
+
+@media (max-width: 480px) {
+    .mainHeader img{
+        width: 100%;
+    }
+}

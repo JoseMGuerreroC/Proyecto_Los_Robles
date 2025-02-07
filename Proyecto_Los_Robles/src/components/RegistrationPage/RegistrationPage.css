@@ -1,0 +1,110 @@
+.back{
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.back a{
+    color: var(--onyx);
+    font-family: var(-mainFont);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+    font-family: var(--mainFont);
+    transition: all .4;
+    text-decoration: none;
+}
+
+.back a i{
+    transform: translateY(1px);
+}
+
+.back a:hover{
+    text-decoration: underline;
+}
+
+.registerTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.registerTitle img{
+    width: 300px;
+    min-width: 100px;
+    object-fit: contain;
+}
+
+.registerTitle h1{
+    font-family: var(--mainFont);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--onyx);
+}
+
+.registerForm{
+    height: auto;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field label{
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: var(--mainFont);
+    color: var(--onyx);
+}
+
+.field input, .field select{
+    height: 40px;
+    border: none;
+    padding: 5px;
+    font-family: var(--mainFont);
+    font-size: 15px;
+    width: 100%;
+}
+
+.registerCheck{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--mainFont);
+}
+
+.registerSend{
+    display: flex;
+    justify-content: center;
+}
+
+.registerSend input{
+    width: 30%;
+    min-width: 150px;
+    height: 30px;
+    border: none;
+    padding: 5px;
+    font-family: var(--mainFont);
+    font-size: 15px;
+    background: var(--tomato);
+    color: #ffffff;
+    height: 40px;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.registerSend input:hover{
+    background: var(--darktomato);
+}
+
+
+
