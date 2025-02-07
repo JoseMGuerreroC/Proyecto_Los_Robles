@@ -1,13 +1,281 @@
-.pendingPay h2{
+.pendingPay h2 {
     font-family: var(--mainFont);
     color: var(--onyx);
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 700;
 }
 
-.itemPay{
+.payAll {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.payAll p {
+    font-size: 15px;
+    color: var(--onyx);
+    font-family: var(--mainFont);
+    font-weight: 700;
+}
+
+.payAllBtn {
+    font-size: 15px;
+    font-family: var(--mainFont);
+    color: var(--antiwhite);
+    border: none;
+    padding: 10px;
+    background: var(--tomato);
+    transition: all .25s;
+    width: 20%;
+}
+
+.payAllBtn:hover {
+    background: var(--darktomato);
+    transform: scale(.95);
+}
+
+.itemPay {
     padding: 15px;
     background: var(--sandybrown);
-    margin: 10px;
     display: flex;
+}
+
+.itemPayInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+    justify-content: center;
+}
+
+.itemPayInfo p {
+    color: var(--antiwhite);
+    font-family: var(--mainFont);
+    font-size: 15px;
+}
+
+.itemPayInfo h3 {
+    color: var(--onyx);
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.itemButton {
+    font-size: 15px;
+    border: none;
+    background: var(--antiwhite);
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: var(--mainFont);
+    transition: all .25s;
+}
+
+.itemButton:hover {
+    background: var(--darkantiwhite);
+    transform: scale(.95);
+}
+
+.paymentMenu {
+    display: flex;
+    gap: 20px;
+}
+
+.paymentMenu button {
+    font-size: 15px;
+    width: 50%;
+    font-family: var(--mainFont);
+    color: var(--antiwhite);
+    border: none;
+    padding: 10px;
+    background: var(--tomato);
+    transition: all .25s;
+    position: relative;
+}
+
+.paymentMenu button:hover {
+    background: var(--darktomato);
+    transform: scale(.95);
+}
+
+.paymentDues{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--antiwhite);
+    font-size: 15px;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    border-radius: 50%;
+    background: var(--sandybrown);
+    transform: translateX(50%)  translateY(-50%);
+}
+
+@media (max-width: 560px) {
+    .itemPay {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .itemPayInfo {
+        width: 100%;
+    }
+
+    .payAll {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .payAllBtn {
+        width: 100%;
+    }
+}
+
+
+/* Admin Page */
+
+.adminPay h2 {
+    font-family: var(--mainFont);
+    color: var(--onyx);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+}
+
+.adminMenu {
+    display: flex;
+    gap: 20px;
+}
+
+.adminMenu button {
+    font-size: 15px;
+    width: 50%;
+    font-family: var(--mainFont);
+    color: var(--antiwhite);
+    border: none;
+    padding: 10px;
+    background: var(--tomato);
+    transition: all .25s;
+}
+
+.adminMenu button:hover {
+    background: var(--darktomato);
+    transform: scale(.95);
+}
+
+.adminMenu .viewReports {
+    width: 100%;
+}
+
+.adminFilters{
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.adminFilters label{
+    font-family: var(--mainFont);
+    font-size: 13px;
+    color: var(--onyx);
+    margin-right: 5px;
+}
+
+.adminFilters input, .adminFilters select{
+    min-width: 100px;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    font-family: var(--mainFont);
+    font-size: 15px;
+    color: var(--onyx);
+}
+
+.adminFilters input:focus, .adminFilters select:focus{
+    outline: none;
+}
+
+.adminFilters button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: var(--sandybrown);
+}
+
+.adminUser {
+    padding: 15px;
+    background: var(--sandybrown);
+    display: flex;
+}
+
+.adminUser.debt {
+    background: rgb(199, 88, 88);
+
+}
+
+.adminUser.paid {
+    background: rgb(61, 129, 61);
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 16.67%;
+    justify-content: center;
+}
+
+
+
+.userInfo p {
+    color: var(--antiwhite);
+    font-family: var(--mainFont);
+    font-size: 15px;
+}
+
+.userInfo h3 {
+    color: var(--onyx);
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.userInfo:nth-child(5) {
+    width: 23.32%;
+}
+
+.userInfo:nth-child(6) {
+    width: 10%;
+}
+
+.userInfo:nth-child(5) p {
+    font-size: 12px;
+}
+
+.userInfo:nth-child(5) h3 {
+    font-size: 12px;
+}
+
+
+
+@media (max-width: 560px) {
+    .adminUser {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .userInfo {
+        width: 100%;
+    }
+
 }

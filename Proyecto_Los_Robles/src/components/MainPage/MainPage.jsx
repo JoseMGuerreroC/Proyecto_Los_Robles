@@ -6,9 +6,7 @@ import useAuthRedirect from '../UserContext/UseAuthRedirect';
 
 function MainPage() {
     useAuthRedirect();
-
     const { isAdmin } = useContext(UserContext);
-
     return (
         <>
             <header className="mainHeader container-fluid">
@@ -28,7 +26,15 @@ function MainPage() {
                 <div className="row justify-content-center h-100">
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/payments'} className="menuOption">
-                            <div className="numberOf">3</div>
+                            {(isAdmin)? 
+                            <>
+                            
+                            </>
+                            :
+                            <>
+                                <div className="numberOf">3</div>
+                            </>
+                            }
                             <i className="fa-solid fa-file"></i>
                             <p>Administrar pagos</p>
                         </Link>
