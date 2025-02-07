@@ -42,12 +42,14 @@
     background: var(--tomato);
     padding: 20px;
     margin: 10px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    transition: all .25s;
+    text-decoration: none;
+    position: relative;
 }
 
 .menuOption p{
@@ -63,10 +65,38 @@
     font-size: 70px;
 }
 
+.menuOption:hover{
+    background: var(--darktomato);
+    transform: scale(.9);
+}
+
+.menuOption .numberOf{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--antiwhite);
+    font-size: 15px;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    border-radius: 50%;
+    background: var(--sandybrown);
+    transform: translateX(50%)  translateY(-50%);
+} 
+
 .mainFooter{
     height: 50px;
     width: 100vw;
     background: var(--tomato);
+    transition: all .25s;
+}
+
+.mainFooter:hover{
+    background: var(--darktomato)
 }
 
 .mainFooter a{

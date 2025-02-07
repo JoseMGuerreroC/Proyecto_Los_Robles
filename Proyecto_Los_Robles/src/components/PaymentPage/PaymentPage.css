@@ -1,0 +1,13 @@
+.pendingPay h2{
+    font-family: var(--mainFont);
+    color: var(--onyx);
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: 700;
+}
+
+.itemPay{
+    padding: 15px;
+    background: var(--sandybrown);
+    margin: 10px;
+    display: flex;
+}

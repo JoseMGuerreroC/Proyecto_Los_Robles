@@ -1,16 +1,13 @@
 import './MainPage.css'
-import { useContext, useEffect } from 'react';
+import { useContext, } from 'react';
 import { UserContext } from '../UserContext/UserContext';
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
+import useAuthRedirect from '../UserContext/UseAuthRedirect';
 
 function MainPage() {
-    const { isAdmin, isLogged } = useContext(UserContext);
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (!isLogged) {
-            navigate('/login');
-        }
-    }, [])
+    useAuthRedirect();
+
+    const { isAdmin } = useContext(UserContext);
 
     return (
         <>
@@ -23,34 +20,36 @@ function MainPage() {
                         <h1>Menú principal{(isAdmin) ? ' - Perfil Administrador' : ''}</h1>
                     </div>
                     <div className="col-4 text-end d-flex justify-content-end align-items-center">
-                        <Link to={''}><i class="fa-solid fa-user"></i></Link>
+                        <Link to={''}><i className="fa-solid fa-user"></i></Link>
                     </div>
                 </div>
             </header>
             <main className="mainMenu container-fluid">
                 <div className="row justify-content-center h-100">
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
-                        <div className="menuOption">
+                        <Link to={'/payments'} className="menuOption">
+                            <div className="numberOf">3</div>
                             <i className="fa-solid fa-file"></i>
                             <p>Administrar pagos</p>
-                        </div>
+                        </Link>
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
-                        <div className="menuOption">
+                        <Link to={'/notifications'} className="menuOption">
+                            <div className="numberOf">1</div>
                             <i className="fa-solid fa-bell"></i>
                             <p>Centro de notificaciones</p>
-                        </div>
+                        </Link>
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
-                        <div className="menuOption">
+                        <Link to={'/forum'} className="menuOption">
                             <i className="fa-solid fa-message"></i>
                             <p>Foro</p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </main>
             <footer className="mainFooter">
-                <Link to={''}>Descubre más acerca de "Los Robles"</Link>
+                <Link to={'/about-los-robles'}>Descubre más acerca de "Los Robles"</Link>
             </footer>
         </>
     )
