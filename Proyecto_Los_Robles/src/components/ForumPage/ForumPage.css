@@ -68,12 +68,27 @@
 
 .forumItemInfo h2{
     color: var(--onyx);
+    width:fit-content;
     font-weight: 700;
     font-size: 25px;
+    position: relative;
 }
 
 .forumItemInfo h2 span{
-    
+    position: absolute;
+    background: var(--tomato);
+    color: var(--antiwhite);
+    font-size: 15px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translateX(110%) translateY(-2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .forumItemInfo .desc{

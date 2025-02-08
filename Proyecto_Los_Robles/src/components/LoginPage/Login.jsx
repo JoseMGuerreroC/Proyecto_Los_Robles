@@ -59,12 +59,23 @@ function Login() {
             setLoggedTrue();
             navigate("/main");
         }else{
-            console.log('no entras')
+            alert('Utiliza el correo y contraseña proporcionados')
         }
     }
 
     return (
         <>
+            <div className="userExamples">
+                <p>Prueba el sistema con las siguientes cuentas</p>
+                <br />
+                <p>Administrador</p>
+                <p>Correo: admin@admin.com</p>
+                <p>Contraseña: admin</p>
+                <br />
+                <p>Usuario</p>
+                <p>Correo: user@user.com</p>
+                <p>Contraseña: user</p>
+            </div>
             <div ref={loginCont} className="loginCont">
                 <div className="login">
                     <div className="loginTitle">

@@ -149,3 +149,18 @@
 .returnLoginForm:hover i{
     transform: translateY(2px) translateX(-10px);
 }
+
+/* User Examples */
+
+.userExamples{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--antiwhite);
+    font-size: 15px;
+    font-family: var(--mainFont);
+    z-index: 2;
+
+
+}
