@@ -1,5 +1,8 @@
 .navMenu{
-    height: 50px;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    background: var(--alabaster);
 }
 
 .navMenuBack .linkBack{

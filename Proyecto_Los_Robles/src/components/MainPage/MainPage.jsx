@@ -27,13 +27,9 @@ function MainPage() {
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/payments'} className="menuOption">
                             {(isAdmin)? 
-                            <>
-                            
-                            </>
+                            <></>
                             :
-                            <>
-                                <div className="numberOf">3</div>
-                            </>
+                            <><div className="numberOf">3</div></>
                             }
                             <i className="fa-solid fa-file"></i>
                             <p>Administrar pagos</p>
@@ -41,15 +37,19 @@ function MainPage() {
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/notifications'} className="menuOption">
-                            <div className="numberOf">1</div>
+                        {(isAdmin)? 
+                            <></>
+                            :
+                            <><div className="numberOf">1</div></>
+                            }
                             <i className="fa-solid fa-bell"></i>
-                            <p>Centro de notificaciones</p>
+                            <p>{(isAdmin)?'Administrar avisos':'Centro de notificaciones'}</p>
                         </Link>
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/forum'} className="menuOption">
                             <i className="fa-solid fa-message"></i>
-                            <p>Foro</p>
+                            <p>Foros</p>
                         </Link>
                     </div>
                 </div>

@@ -1,0 +1,109 @@
+.forumCont{
+    width: 100%;
+    padding: 40px 10px 40px 10px;
+}
+
+.createForum{
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createForum button{
+    width: 200px;
+    color: var(--antiwhite);
+    background: var(--tomato);
+    font-family: var(--mainFont);
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    transition: all .25s;
+}
+
+.createForum button:hover{
+    background: var(--darktomato);
+    transform: scale(.95);
+}
+
+.forumHistorial{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forumItem{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--antiwhite);
+    font-family: var(--mainFont);
+    
+}
+
+.forumItemInfo{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    background: var(--antiwhite);
+    gap: 10px;
+    padding: 15px;
+    transition: all .25s;
+}
+
+.forumItemInfo.closed{
+    background: var(--darkantiwhite);
+}
+
+.forumItemInfo:hover{
+    background: var(--darkantiwhite);
+}
+
+.forumItemInfo h2{
+    color: var(--onyx);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.forumItemInfo h2 span{
+    
+}
+
+.forumItemInfo .desc{
+    color: var(--lightonyx);
+}
+
+.forumItemInfo .lastmsg{
+    color: var(--onyx);
+    font-size: 15px;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.forumItemEdit{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forumItemEdit button{
+    font-size: 15px;
+    border: none;
+    background: var(--tomato);
+    padding: 10px;
+    color: var(--antiwhite);
+    transition: all .25s;
+}
+
+.forumItemEdit button:hover{
+    background: var(--darktomato);
+    transform: scale(.95);
+}

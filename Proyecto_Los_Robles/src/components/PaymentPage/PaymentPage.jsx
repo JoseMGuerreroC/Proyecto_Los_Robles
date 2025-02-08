@@ -120,7 +120,7 @@ function PaymentPage() {
                             <div className="col-12 adminFilters">
                                 <form>
                                     <label htmlFor="username">Buscar por nombre</label>
-                                    <input id='username' type="search" placeholder='Nombre'/>
+                                    <input id='username' type="search" placeholder='Nombre' />
                                     <button type='submit'><i className="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                                 <form>
@@ -190,6 +190,256 @@ function PaymentPage() {
                                 <div className="col-2 userInfo">
                                     <p>Mes/es adeudado/s</p>
                                     <h3>Febrero 2025</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
+                                </div>
+                                <div className="col-1 userInfo">
+                                    <button className='itemButton'>Ver</button>
+                                </div>
+                            </div>
+                            <div className="col-12 adminUser paid my-2 text-center">
+                                <div className="col-3 userInfo">
+                                    <p>Nombre</p>
+                                    <h3>User</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Código de residencia</p>
+                                    <h3>XXXXXXXXX</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Fecha último pago</p>
+                                    <h3>07/02/2024</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Estado</p>
+                                    <h3>Sin Adeudo</h3>
+                                </div>
+                                <div className="col-2 userInfo">
+                                    <p>Mes/es adeudado/s</p>
+                                    <h3>N/A</h3>
                                 </div>
                                 <div className="col-1 userInfo">
                                     <button className='itemButton'>Ver</button>
