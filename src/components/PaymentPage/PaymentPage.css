@@ -72,6 +72,8 @@
     padding-bottom: 10px;
     font-family: var(--mainFont);
     transition: all .25s;
+    text-decoration: none;
+    color: var(--onyx);
 }
 
 .itemButton:hover {
@@ -117,6 +119,111 @@
     border-radius: 50%;
     background: var(--sandybrown);
     transform: translateX(50%)  translateY(-50%);
+}
+
+.modalPay{
+    position: absolute;
+    top: 0;
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+.modalPay .background{
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(5px);
+}
+
+.closeModal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    color: var(--antiwhite);
+    font-size: 30px;
+    background: none;
+    border: none;
+    z-index: 40;
+}
+
+.modalContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 30;
+    width: 60%;
+    background: var(--antiwhite);
+    height: 80%;
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.modalContent h2{
+    color: var(--tomato);
+    font-family: var(--mainFont);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.modalContent .modalText{
+    color: var(--darktomato);
+    font-family: var(--mainFont);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modalContent .modalImp{
+    color: var(--sandybrown);
+    font-size: 40px;
+    font-family: var(--mainFont);
+    font-weight: 700;
+}
+
+.modalContent .stripe{
+    background: rgb(104, 26, 138);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modalContent .stripe img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.modalContent button{
+    border: none;
+    background: var(--darkantiwhite);
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: var(--mainFont);
+}
+
+.modalContent .paypal{
+    color: blue;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modalContent .paypal img{
+    width: 40px;
 }
 
 @media (max-width: 560px) {
