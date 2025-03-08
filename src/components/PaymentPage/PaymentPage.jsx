@@ -3,6 +3,8 @@ import useAuthRedirect from "../UserContext/UseAuthRedirect";
 import { useContext, useRef } from "react";
 import { UserContext } from "../UserContext/UserContext";
 import Nav from "../Nav/Nav";
+import Swal from 'sweetalert2';
+import { Link } from "react-router-dom";
 
 function PaymentPage() {
   useAuthRedirect();
@@ -14,14 +16,36 @@ function PaymentPage() {
 
   function Pay(mot, imp) {
     modal.current.style.display = 'block';
-    motivo.current.textContent= mot;
+    motivo.current.textContent = mot;
     importe.current.textContent = imp;
   }
 
-  function closeModal(){
+  function closeModal() {
     modal.current.style.display = 'none';
-    motivo.current.textContent= '';
+    motivo.current.textContent = '';
     importe.current.textContent = '';
+  }
+
+  function PayInModal(msg) {
+    closeModal();
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
+      icon: "success",
+      title: msg,
+      customClass: {
+        title: 'toastTitle'
+      }
+    });
   }
 
   return (
@@ -33,16 +57,16 @@ function PaymentPage() {
           <i className="fa-solid fa-x"></i>
         </button>
         <div className="modalContent">
-            <h2>Módulo de pago</h2>
-            <p className="modalText">Motivo</p>
-            <p className="modalImp" ref={motivo}></p>
-            <p className="modalText">Importe</p>
-            <p className="modalImp" ref={importe}></p>
-            <p className="modalTotal"></p>
-            <button>Pagar en línea</button>
-            <button>Generar referencia</button>
-            <button className="paypal">Pagar con paypal <img src="/PayPal.png" alt="" /></button>
-            <button className="stripe">Pagar con stripe <img src="/stripe.jpeg" alt="" /></button>
+          <h2>Módulo de pago</h2>
+          <p className="modalText">Motivo</p>
+          <p className="modalImp" ref={motivo}></p>
+          <p className="modalText">Importe</p>
+          <p className="modalImp" ref={importe}></p>
+          <p className="modalTotal"></p>
+          <button onClick={() => { PayInModal('Pago registrado exitosamente') }}>Pagar en línea</button>
+          <button onClick={() => { PayInModal('Referencia generada exitosamente') }}>Generar referencia</button>
+          <button onClick={() => { PayInModal('Reedirigiendo a Paypal') }} className="paypal">Pagar con paypal <img src="/PayPal.png" alt="" /></button>
+          <button onClick={() => { PayInModal('Redirigiendo a Stripe') }} className="stripe">Pagar con stripe <img src="/stripe.jpeg" alt="" /></button>
 
         </div>
       </div>
@@ -161,16 +185,16 @@ function PaymentPage() {
           <main className="adminPay container pl-0 mt-5">
             <div className="row my-2">
               <div className="col-12 adminMenu">
-                <button>Generar reporte de mes actual (Febrero - 2025)</button>
-                <button>Generar reporte de mes anterior (Enero - 2025)</button>
+                <Link className="adminButton" to={'/report'}>Generar reporte de mes actual (Febrero - 2025)</Link>
+                <Link className="adminButton" to={'/report'}>Generar reporte de mes anterior (Enero - 2025)</Link>
               </div>
             </div>
             <div className="row my-2">
               <div className="col-12 mb-2 adminMenu">
-                <button className="viewReports">Historial de reportes</button>
+                <button className="viewReports adminButton">Historial de reportes</button>
               </div>
               <div className="col-12 adminMenu">
-                <button className="viewReports">Ver todos los pagos</button>
+                <button className="viewReports adminButton">Ver todos los pagos</button>
               </div>
             </div>
             <div className="row my-3">
@@ -232,7 +256,7 @@ function PaymentPage() {
                   <h3>Enero 2025, Febrero 2025</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
               <div className="col-12 adminUser my-2 text-center">
@@ -257,7 +281,7 @@ function PaymentPage() {
                   <h3>Febrero 2025</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
               <div className="col-12 adminUser paid my-2 text-center">
@@ -282,7 +306,7 @@ function PaymentPage() {
                   <h3>N/A</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
               <div className="col-12 adminUser paid my-2 text-center">
@@ -307,7 +331,7 @@ function PaymentPage() {
                   <h3>N/A</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
               <div className="col-12 adminUser paid my-2 text-center">
@@ -332,7 +356,7 @@ function PaymentPage() {
                   <h3>N/A</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                  <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
               <div className="col-12 adminUser paid my-2 text-center">
@@ -357,184 +381,11 @@ function PaymentPage() {
                   <h3>N/A</h3>
                 </div>
                 <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
+                  <Link to={'/payments/user'} className="itemButton">Ver</Link>
                 </div>
               </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
-              <div className="col-12 adminUser paid my-2 text-center">
-                <div className="col-3 userInfo">
-                  <p>Nombre</p>
-                  <h3>User</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Código de residencia</p>
-                  <h3>XXXXXXXXX</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Fecha último pago</p>
-                  <h3>07/02/2024</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Estado</p>
-                  <h3>Sin Adeudo</h3>
-                </div>
-                <div className="col-2 userInfo">
-                  <p>Mes/es adeudado/s</p>
-                  <h3>N/A</h3>
-                </div>
-                <div className="col-1 userInfo">
-                  <button className="itemButton">Ver</button>
-                </div>
-              </div>
+
+
             </div>
           </main>
         </>

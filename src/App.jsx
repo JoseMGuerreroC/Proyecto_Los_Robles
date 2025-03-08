@@ -10,6 +10,8 @@ import ForumPage from "./components/ForumPage/ForumPage";
 import AboutPage from "./components/AboutPage/AboutPage";
 
 import { UserProvider } from "./components/UserContext/UserContext";
+import UserPayments from "./components/UserPayments/UserPayments";
+import Report from "./components/Reports/Reports";
 
 function App() {
 
@@ -23,8 +25,10 @@ function App() {
             <Route path={'/register'} element={<RegistrationPage></RegistrationPage>} />
             <Route path={'/main'} element={<MainPage></MainPage>} />
             <Route path={'/payments'} element={<PaymentPage></PaymentPage>} />
+            <Route path={'/payments/user'} element={<UserPayments></UserPayments>} />
             <Route path={'/notifications'} element={<NotificationPage></NotificationPage>} />
             <Route path={'/forum'} element={<ForumPage></ForumPage>} />
+            <Route path={'/report'} element={<Report></Report>} />
             <Route path={'/about-los-robles'} element={<AboutPage></AboutPage>} />
             <Route path="*" element={<Page404></Page404>}></Route>
           </Routes>
