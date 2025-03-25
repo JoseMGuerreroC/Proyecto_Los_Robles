@@ -1,0 +1,154 @@
+.hero{
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.hero .heroImg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(6px);
+}
+
+.hero .heroIcon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 5;
+    width: 30%;
+    filter: invert(100%);
+}
+
+.aboutNews{
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    background: var(--lightonyx);
+
+}
+
+.newsItem{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.newsItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newsItem p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--antiwhite);
+    font-family: var(--mainFont);
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+.aboutNewsTitle{
+    color: var(--onyx);
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.aboutMenu{
+    width: 100%;
+    height: 80px;
+    background: var(--darktomato);
+    z-index: 5;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutMenu a{
+    text-decoration: none;;
+    color: var(--antiwhite);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.aboutMain{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutInfo{
+    width: 50%;
+    height: auto;
+}
+
+.aboutSection{
+    margin: 40px 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutSection h3{
+    color: var(--onyx);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.aboutSection h4{
+    color: var(--onyx);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--mainFont);
+}
+
+.aboutSection img{
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+.aboutSection p{
+    color: var(--onyx);
+    font-family: var(--mainFont);
+    font-size: 18px;
+}
+
+.aboutSection ul li{
+    color: var(--onyx);
+    font-family: var(--mainFont);
+    font-size: 18px;
+}
+
+.aboutSection ul li span{
+    color: #000;
+    font-family: var(--mainFont);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.aboutSection img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+

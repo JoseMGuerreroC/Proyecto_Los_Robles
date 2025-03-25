@@ -26,10 +26,10 @@ function MainPage() {
                 <div className="row justify-content-center h-100">
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/payments'} className="menuOption">
-                            {(isAdmin)? 
-                            <></>
-                            :
-                            <><div className="numberOf">3</div></>
+                            {(isAdmin) ?
+                                <></>
+                                :
+                                <><div className="numberOf">3</div></>
                             }
                             <i className="fa-solid fa-file"></i>
                             <p>Administrar pagos</p>
@@ -37,13 +37,13 @@ function MainPage() {
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
                         <Link to={'/notifications'} className="menuOption">
-                        {(isAdmin)? 
-                            <></>
-                            :
-                            <><div className="numberOf">1</div></>
+                            {(isAdmin) ?
+                                <></>
+                                :
+                                <><div className="numberOf">1</div></>
                             }
                             <i className="fa-solid fa-bell"></i>
-                            <p>{(isAdmin)?'Administrar avisos':'Centro de notificaciones'}</p>
+                            <p>{(isAdmin) ? 'Administrar avisos' : 'Centro de notificaciones'}</p>
                         </Link>
                     </div>
                     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
@@ -54,9 +54,13 @@ function MainPage() {
                     </div>
                 </div>
             </main>
-            <footer className="mainFooter">
-                <Link to={'/about-los-robles'}>Descubre más acerca de "Los Robles"</Link>
-            </footer>
+            {(isAdmin) ?
+                <></>
+                :
+                <footer className="mainFooter">
+                    <Link to={'/about-los-robles'}>Más información sobre Los Robles</Link>
+                </footer>
+            }
         </>
     )
 }
