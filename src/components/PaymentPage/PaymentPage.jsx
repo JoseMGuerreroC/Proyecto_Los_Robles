@@ -63,7 +63,8 @@ function PaymentPage() {
           <p className="modalText">Importe</p>
           <p className="modalImp" ref={importe}></p>
           <p className="modalTotal"></p>
-          <button onClick={() => { PayInModal('Pago registrado exitosamente') }}>Pagar en línea</button>
+          <button onClick={() => { PayInModal('Pago registrado exitosamente'); PayInModal('Se ha enviado un SMS con el comprobante de su pago') }}>Pagar en línea</button>
+          <button onClick={() => { PayInModal('Generando datos para transferencia') }}>Pagar por transferencia</button>
           <button onClick={() => { PayInModal('Referencia generada exitosamente') }}>Generar referencia</button>
           <button onClick={() => { PayInModal('Reedirigiendo a Paypal') }} className="paypal">Pagar con paypal <img src="/PayPal.png" alt="" /></button>
           <button onClick={() => { PayInModal('Redirigiendo a Stripe') }} className="stripe">Pagar con stripe <img src="/stripe.jpeg" alt="" /></button>

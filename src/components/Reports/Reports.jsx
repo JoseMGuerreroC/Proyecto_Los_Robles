@@ -19,6 +19,9 @@ function Report() {
                     <div className="col-12 mb-2 adminMenu">
                         <button className="viewReports adminButton">Exportar como CSV</button>
                     </div>
+                    <div className="col-12 mb-2 adminMenu">
+                        <button className="viewReports adminButton">Exportar como Word</button>
+                    </div>
                 </div>
                 <div className="row my-3">
                     <div className="col-12">

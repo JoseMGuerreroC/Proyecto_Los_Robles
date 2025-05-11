@@ -19,6 +19,12 @@ function RegistrationPage() {
                     </div>
                 </div>
                 <div className="row mb-4">
+                    <div className="registerName col-12 field">
+                        <label htmlFor="foto">Suba una foto suya en formato PDF o JPG (Máximo 5MB)</label>
+                        <input required id='foto' type="file" />
+                    </div>
+                </div>
+                <div className="row mb-4">
                     <div className="col-lg-6 col-12 mb-4 registerSurname field">
                         <label htmlFor="patSurname">Apellido Paterno</label>
                         <input required id='patSurname' type="text" placeholder='Introduzca su apellido paterno' />
@@ -45,6 +51,12 @@ function RegistrationPage() {
                             <option value="Mujer">Mujer</option>
                             <option value="N/A">Deseo no especificar</option>
                         </select>
+                    </div>
+                </div>
+                <div className="row mb-4">
+                    <div className="registerName col-12 field">
+                        <label htmlFor="nss">NSS</label>
+                        <input required id='nss' type="text" placeholder='Introduzca su NSS' />
                     </div>
                 </div>
                 <div className="row mb-4">
